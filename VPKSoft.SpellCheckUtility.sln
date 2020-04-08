@@ -1,0 +1,36 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29926.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VPKSoft.SpellCheckUtility", "VPKSoft.SpellCheckUtility\VPKSoft.SpellCheckUtility.csproj", "{9B2AA1EB-A321-40C1-A738-6AD30477224C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp", "TestApp\TestApp.csproj", "{E1AE730C-CC11-4656-B79D-26F072482B08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VPKSoft.SpellCheckUtility.WinForms", "VPKSoft.SpellCheckUtility.WinForms\VPKSoft.SpellCheckUtility.WinForms.csproj", "{6510EF7D-B8A1-4196-8437-596FD62F0139}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9B2AA1EB-A321-40C1-A738-6AD30477224C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B2AA1EB-A321-40C1-A738-6AD30477224C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B2AA1EB-A321-40C1-A738-6AD30477224C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B2AA1EB-A321-40C1-A738-6AD30477224C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1AE730C-CC11-4656-B79D-26F072482B08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1AE730C-CC11-4656-B79D-26F072482B08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1AE730C-CC11-4656-B79D-26F072482B08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1AE730C-CC11-4656-B79D-26F072482B08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6510EF7D-B8A1-4196-8437-596FD62F0139}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6510EF7D-B8A1-4196-8437-596FD62F0139}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6510EF7D-B8A1-4196-8437-596FD62F0139}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6510EF7D-B8A1-4196-8437-596FD62F0139}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A29582BD-BE4B-4672-B336-C4807D7DC804}
+	EndGlobalSection
+EndGlobal

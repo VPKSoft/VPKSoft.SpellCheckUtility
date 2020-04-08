@@ -1,0 +1,63 @@
+MIT License
+
+Copyright(c) 2020 Petteri Kautonen
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+This is the simple tab-delimited localization file.
+As you can see only the "[]" tags and tab delimited key-value pairs matter for the localization.
+The tab-delimited text can also include comments, etc. by adding a new tab-delimited field.
+
+Use the '&' character to indicate the mnemonic character if the Alt-key is pressed within the dialog. 
+NOTE: that these must be unique to work but no errors are caused if they aren't unique.
+
+[en-US]
+txtTest	Test	A test text to show the localization method
+txtTitle	Spell checking
+txtMisspelledWord	Misspelled word:
+txtReplaceWith	Replace &with:	mnemonic: w
+txtCheckWord	Chec&k word	mnemonic: k
+txtSuggestions	S&uggestions:	mnemonic: u
+txtReplace	&Replace	mnemonic: R
+txtIgnore	&Ignore	mnemonic: I
+txtReplaceAll	Replace &all	mnemonic: a
+txtIgnoreAll	Ig&nore all	mnemonic: n
+txtUserDictionary	User dictionary:
+txtAddWord	A&dd word	mnemonic: d
+txtIgnoreAlways	I&gnore always	mnemonic: g
+txtWord	Word:
+txtClose	&Close	mnemonic: C
+txtWordOfWordFormat	{0} / {1}
+[fi-FI]
+txtTest	Testi	Testiteksti n‰ytt‰m‰‰n lokalisoinnin tapa
+txtTitle	Oikoluku
+txtMisspelledWord	V‰‰rin kirjoittettu sana:
+txtReplaceWith	&Korvaa sanalla:	mnemonic: K
+txtCheckWord	T&arkista sana	mnemonic: a
+txtSuggestions	&Ehdotukset:	mnemonic: E
+txtReplace	Kor&vaa	mnemonic: v
+txtIgnore	&Ohita	mnemonic: O
+txtReplaceAll	Ko&rvaa kaikki	mnemonic: r
+txtIgnoreAll	O&hita kaikki	mnemonic: h
+txtUserDictionary	K‰ytt‰j‰n sanasto:
+txtAddWord	&Lis‰‰ sana	mnemonic: L
+txtIgnoreAlways	Oh&ita aina	mnemonic: i
+txtWord	Sana:
+txtClose	&Sulje	mnemonic: S
+txtWordOfWordFormat	{0} / {1}
