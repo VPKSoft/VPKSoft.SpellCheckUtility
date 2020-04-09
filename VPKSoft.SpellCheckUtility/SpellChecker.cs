@@ -235,6 +235,13 @@ namespace VPKSoft.SpellCheckUtility
         }
 
         /// <summary>
+        /// Gets or sets a value indicating whether any calls to the <see cref="ISpellCheck.RunSpellCheck"/> method
+        /// calls were made on the previous call to the <see cref="RunSpellCheckInterface"/> or to the <see cref="RunSpellCheckInterfaceOnText"/> methods.
+        /// This equals that no spelling errors were found.
+        /// </summary>
+        public static bool ChecksDoneOnPreviousRun { get; set; }
+
+        /// <summary>
         /// Loops the given text through spell check <see cref="ISpellCheck.RunSpellCheck"/> interface
         /// method implementation amd returns the user given corrections for the given.
         /// </summary>
@@ -244,6 +251,7 @@ namespace VPKSoft.SpellCheckUtility
         /// <returns>A list of corrections made to the text spell-checked by user.</returns>
         public List<SpellingCorrection> RunSpellCheckInterface(ISpellCheck spellCheck, string text, bool nullOnClose)
         {
+            ChecksDoneOnPreviousRun = false;
             var result = new List<SpellingCorrection>(); // create the result instance..
 
             // attach the methods to the interface-implementing class..
@@ -314,6 +322,7 @@ namespace VPKSoft.SpellCheckUtility
 
                 // call the ISpellCheck implementation instance to choose the action for a
                 // new misspelled word..
+                ChecksDoneOnPreviousRun = true;
                 if (!spellCheck.RunSpellCheck(word, SuggestWords(word.Word), i + 1, missSpelledWords.Count))
                 {
                     // set the interrupted flag to true so the result of this

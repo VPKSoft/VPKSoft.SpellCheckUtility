@@ -10,7 +10,7 @@
     <projectUrl>https://www.vpksoft.net/2015-03-31-13-33-28/libraries/utility-libraries</projectUrl>
     <iconUrl>http://icon_url_here_or_delete_this_line/</iconUrl>
     <description>$description$</description>
-    <releaseNotes>Initial NuGet release.</releaseNotes>
+    <releaseNotes>Added NuGet dependency for VPKSoft.SpellCheckUtility.</releaseNotes>
     <copyright>Copyright © VPKSoft 2020</copyright>
     <tags>utility spell check winforms</tags>
     <icon>vpksoft_logo.png</icon>
