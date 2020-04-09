@@ -596,6 +596,16 @@ namespace VPKSoft.SpellCheckUtility
         }
 
         /// <summary>
+        /// Clears to user dictionary.
+        /// </summary>
+        public static void ClearUserDictionary()
+        {
+            UserDictionary = null;
+            UserDictionaryWords.Clear();
+            IgnoreList.Clear();
+        }
+
+        /// <summary>
         /// Loads the user dictionary and the word ignore list from a given stream.
         /// </summary>
         /// <param name="stream">The stream load the the word list from.</param>
