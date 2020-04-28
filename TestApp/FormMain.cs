@@ -64,6 +64,7 @@ namespace TestApp
             SpellChecker.LoadDictionary(Path.Combine(DictionaryPath, "en_US.dic"),
                 Path.Combine(DictionaryPath, "en_US.aff"));
 
+
             // subscribe to the event which is called by the SpellChecker class on progressing with the spell checking;
             // there is no reason to subscribe this event if the checking isn't visualized or done in real-time..
             SpellChecker.SpellCheckLocationChanged += SpellChecker_SpellCheckLocationChanged;

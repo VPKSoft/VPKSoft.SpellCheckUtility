@@ -45,6 +45,11 @@ namespace VPKSoft.SpellCheckUtility
         private static WordList Dictionary { get; set; }
 
         /// <summary>
+        /// Gets or sets the optional <see cref="IExternalDictionarySource"/> external dictionary interface to replace the Hunspell dictionary.
+        /// </summary>
+        public static IExternalDictionarySource ExternalDictionary { get; set; }
+
+        /// <summary>
         /// Gets or sets the user dictionary that the <see cref="WeCantSpell.Hunspell"/> class library has created.
         /// </summary>
         private static WordList UserDictionary { get; set; }
@@ -63,6 +68,26 @@ namespace VPKSoft.SpellCheckUtility
         /// Gets or sets the word boundary regex used with the <see cref="SpellCheckFast"/> method.
         /// </summary>
         public Regex WordBoundaryRegex { get; set; } = new Regex( "\\b\\w+\\b", RegexOptions.Compiled);
+
+        /// <summary>
+        /// Gets word suggestions from either the <see cref="ExternalDictionary"/> or the given Hunspell dictionary set via the <see cref="LoadDictionary"/> method.
+        /// </summary>
+        /// <param name="word">The word.</param>
+        /// <returns>A IEnumerable&lt;System.String&gt; containing the suggestions.</returns>
+        private IEnumerable<string> DictionarySuggest(string word)
+        {
+            return Dictionary == null ? ExternalDictionary?.Suggest(word) : Dictionary.Suggest(word);
+        }
+
+        /// <summary>
+        /// Checks if the word is spelled correctly using either the <see cref="ExternalDictionary"/> or the given Hunspell dictionary set via the <see cref="LoadDictionary"/> method.
+        /// </summary>
+        /// <param name="word">The word to check for.</param>
+        /// <returns><c>true</c> if the word is spelled correctly, <c>false</c> otherwise.</returns>
+        private bool DictionaryCheck(string word)
+        {
+            return (Dictionary?.Check(word) ?? ExternalDictionary?.Check(word)) == true;
+        }
 
         /// <summary>
         /// Gets a word single word matching regular expression in case of on the fly error correction.
@@ -160,7 +185,7 @@ namespace VPKSoft.SpellCheckUtility
             // get the dictionary suggestions..
             try
             {
-                suggestions = Dictionary.Suggest(word).ToList();
+                suggestions = DictionarySuggest(word).ToList();
             }
             catch
             {
@@ -171,7 +196,6 @@ namespace VPKSoft.SpellCheckUtility
             {
                 try
                 {
-
                     var userSuggestions = UserDictionary.Suggest(word).ToList();
                     for (int i = 0; i < userSuggestions.Count; i++)
                     {
@@ -439,7 +463,7 @@ namespace VPKSoft.SpellCheckUtility
                 }
 
                 // validate the word with the loaded dictionary..
-                if (!Dictionary.Check(words[i].Value))
+                if (!DictionaryCheck(words[i].Value))
                 {
                     // flag the word as invalid to prevent re-checking the validity..
                     failedWords.Add(words[i].Value);
