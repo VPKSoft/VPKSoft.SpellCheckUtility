@@ -29,6 +29,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
+using VPKSoft.SpellCheck.ExternalDictionarySource;
 using VPKSoft.SpellCheckUtility.UtilityClasses;
 using WeCantSpell.Hunspell;
 
